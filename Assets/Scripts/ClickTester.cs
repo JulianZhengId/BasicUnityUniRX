@@ -2,7 +2,6 @@ using UnityEngine;
 using UniRx;
 using UniRx.Triggers;
 using System;
-using UnityEngine.UI;
 
 public class ClickTester : MonoBehaviour
 {
@@ -14,9 +13,18 @@ public class ClickTester : MonoBehaviour
     {
         textHandler = FindObjectOfType<TextHandler>();
         myRenderer = GetComponent<Renderer>();
-        clickTrigger = gameObject.AddComponent<ObservablePointerClickTrigger>()
-            .OnPointerClickAsObservable()
-            .Select(e => EventArgs.Empty);
+        if(gameObject.GetComponent<ObservablePointerClickTrigger>() == null)
+        {
+            clickTrigger = gameObject.AddComponent<ObservablePointerClickTrigger>()
+                .OnPointerClickAsObservable()
+                .Select(e => EventArgs.Empty);
+        }
+        else
+        {
+            clickTrigger = gameObject.GetComponent<ObservablePointerClickTrigger>()
+                .OnPointerClickAsObservable()
+                .Select(e => EventArgs.Empty);
+        }
     }
 
     private void Start()
@@ -45,6 +53,7 @@ public class ClickTester : MonoBehaviour
         //Apply Outline
         GameData.gameData.SelectedObject = this.gameObject;
         ApplyOutline();
+        UndoHandler.undoHandler.SetActiveButtons(true);
     }
 
     private void SetBuildingAttributesText()
@@ -61,14 +70,9 @@ public class ClickTester : MonoBehaviour
         myRenderer.material.SetFloat("_OutlineWidth", 1);
     }
 
-    private void ApplyOutline()
+    public void ApplyOutline()
     {
         myRenderer.material.SetFloat("_OutlineWidth", 1.05f);
         myRenderer.material.SetColor("_OutlineColor", new Color(1f, 0.64f, 0f));
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log("Collide");
     }
 }

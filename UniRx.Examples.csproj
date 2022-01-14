@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>8.0</LangVersion>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -53,25 +53,22 @@
     <UnityVersion>2020.3.21f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Compile Include="Assets\UniRx\Examples\Sample09_EventHandling.cs" />
+    <Compile Include="Assets\UniRx\Examples\Sample02_ObservableTriggers.cs" />
+    <Compile Include="Assets\UniRx\Examples\Sample08_DetectDoubleClick.cs" />
+    <Compile Include="Assets\UniRx\Examples\Sample05_ConvertFromCoroutine.cs" />
+    <Compile Include="Assets\UniRx\Examples\Sample12_ReactiveProperty.cs" />
+    <Compile Include="Assets\UniRx\Examples\Sample06_ConvertToCoroutine.cs" />
+    <Compile Include="Assets\UniRx\Examples\Sample13_ToDoApp.cs" />
+    <Compile Include="Assets\UniRx\Examples\Sample01_ObservableWWW.cs" />
+    <Compile Include="Assets\UniRx\Examples\Sample04_ConvertFromUnityCallback.cs" />
+    <Compile Include="Assets\UniRx\Examples\Sample07_OrchestratIEnumerator.cs" />
+    <Compile Include="Assets\UniRx\Examples\Sample03_GameObjectAsObservable.cs" />
+    <Compile Include="Assets\UniRx\Examples\Sample10_MainThreadDispatcher.cs" />
+    <Compile Include="Assets\UniRx\Examples\Sample11_Logger.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Plugins\UniRx\Examples\Sample09_EventHandling.cs" />
-    <Compile Include="Assets\Plugins\UniRx\Examples\Sample02_ObservableTriggers.cs" />
-    <Compile Include="Assets\Plugins\UniRx\Examples\Sample08_DetectDoubleClick.cs" />
-    <Compile Include="Assets\Plugins\UniRx\Examples\Sample05_ConvertFromCoroutine.cs" />
-    <Compile Include="Assets\Plugins\UniRx\Examples\Sample12_ReactiveProperty.cs" />
-    <Compile Include="Assets\Plugins\UniRx\Examples\Sample06_ConvertToCoroutine.cs" />
-    <Compile Include="Assets\Plugins\UniRx\Examples\Sample13_ToDoApp.cs" />
-    <Compile Include="Assets\Plugins\UniRx\Examples\Sample01_ObservableWWW.cs" />
-    <Compile Include="Assets\Plugins\UniRx\Examples\Sample04_ConvertFromUnityCallback.cs" />
-    <Compile Include="Assets\Plugins\UniRx\Examples\Sample07_OrchestratIEnumerator.cs" />
-    <Compile Include="Assets\Plugins\UniRx\Examples\Sample03_GameObjectAsObservable.cs" />
-    <Compile Include="Assets\Plugins\UniRx\Examples\Sample10_MainThreadDispatcher.cs" />
-    <Compile Include="Assets\Plugins\UniRx\Examples\Sample11_Logger.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\Plugins\UniRx\Examples\UniRx.Examples.asmdef" />
+    <None Include="Assets\UniRx\Examples\UniRx.Examples.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

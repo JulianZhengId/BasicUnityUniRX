@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameData : MonoBehaviour
@@ -7,11 +5,15 @@ public class GameData : MonoBehaviour
     public enum EditModes
     {
         IDLE,
-        MOVING_BUILDING,
+        MOVING_BUILDING_X,
+        MOVING_BUILDING_Z,
         LIFT_BUILDING,
         MODIFY_LENGTH,
         MODIFY_WIDTH,
         MODIFY_HEIGHT,
+        ROTATE_X,
+        ROTATE_Y,
+        ROTATE_Z,
         ASSIGN_MATERIAL
     }
 
