@@ -1,0 +1,15 @@
+This app is made with Unity.
+In this app, you can create a Base(cube) for a building.
+
+When you click on the Base, you can see there is an outline applied on the Base
+That means the current selected object is that cube.
+You can configure the Base (move, rotate, resize, texture).
+You can drag on the phone screen to do the configuration.
+
+Moreover, This app has 
+- some buttons like Undo, Copy, Delete, Deselect.
+- Slider for zoom in and zoom out.
+But there is still no merge button in this game to merge buildings together.
+
+Building's Attributes are also provided for the selected Base.
+e.g : Position, Size, etc.
