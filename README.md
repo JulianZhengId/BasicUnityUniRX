@@ -15,4 +15,4 @@ Simple implementation of UniRx to easily interact with objects
 . Deselect <br />
 . Camera Zoom <br />
 <br />
-When clicking on the cube, the app will shows information about the cube
+When clicking on the cube, the app will shows information about that cube
